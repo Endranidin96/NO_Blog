@@ -13207,42 +13207,6 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div style="width:850px; text-align: justify;font-size:15px;">Given, "Over", "B1", "B2" we need to predict "B3". Here, coefficient matrix $\textbf{A}_{(nX3)}$, parameter vector $x_{(3X1)}$ and ground truth $y_{(nX1)}$. 
-\begin{align*}
-    \textbf{J(x)} &= \min_{x}{f(x)} \equiv \frac{1}{2} \lVert \textbf{r} \rVert^{2}\\
-                  &= \min_{x}{(\textbf{A}x-y)^{T}(\textbf{A}x-y)}
-\end{align*}
-    Now for objective minimization, set $\frac{\partial \textbf{J(x)}}{\partial x} = 0$
-\begin{align*}
-                    \therefore \frac{\partial \textbf{J(x)}}{\partial x} &\equiv \frac{1}{2}\frac{\partial (\textbf{A}x-y)^{T}(\textbf{A}x-y)}{\partial x} = 0\\
-                    &\equiv \textbf{A}^{T}(\textbf{A}x - y) = 0\\
-                    \therefore \textbf{A}^{T}\textbf{A}x &= \textbf{A}^{T}y &(3)
-\end{align*}
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div style="width:850px; text-align: justify;font-size:15px;">
-Now we need to solve eq(3), to get parameter $x$. To solve this linear equation of the form $\textbf{A}x=b$ for x, we use 3 aforementioned methods.
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div style="width:850px; text-align: justify;font-size:15px;">
-Now using these parameter values we can do prediction for any unseen data.
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p><h2 style="color:red">1) Cholesky Factorization
     </h2></p>
 <div style="width:850px; text-align: justify;font-size:15px;">The Normal Equations Method computes the solution to the Least Squares Problem by transforming
@@ -13606,6 +13570,33 @@ over of play is given. Formulate the least squares problem and write code to sol
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div style="width:850px; text-align: justify;font-size:15px;">Given, "Over", "B1", "B2" we need to predict "B3". Here, coefficient matrix $\textbf{A}_{(nX3)}$, parameter vector $x_{(3X1)}$ and ground truth $y_{(nX1)}$. 
+\begin{align*}
+    \textbf{J(x)} &= \min_{x}{f(x)} \equiv \frac{1}{2} \lVert \textbf{r} \rVert^{2}\\
+                  &= \min_{x}{(\textbf{A}x-y)^{T}(\textbf{A}x-y)}
+\end{align*}
+    Now for objective minimization, set $\frac{\partial \textbf{J(x)}}{\partial x} = 0$
+\begin{align*}
+                    \therefore \frac{\partial \textbf{J(x)}}{\partial x} &\equiv \frac{1}{2}\frac{\partial (\textbf{A}x-y)^{T}(\textbf{A}x-y)}{\partial x} = 0\\
+                    &\equiv \textbf{A}^{T}(\textbf{A}x - y) = 0\\
+                    \therefore \textbf{A}^{T}\textbf{A}x &= \textbf{A}^{T}y &(3)
+\end{align*}
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div style="width:850px; text-align: justify;font-size:15px;">
+Now we need to solve eq(3), to get parameter $x$. To solve this linear equation of the form $\textbf{A}x=b$ for x, we use 3 aforementioned methods.
+</div>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
@@ -13800,18 +13791,14 @@ SVD:  [0.198 -0.027 0.560]
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div style="width:850px; text-align: justify;font-size:15px;">
+Now using these parameter values we can do prediction for any unseen data.
 </div>
 </div>
-
+</div>
 </div>
     </div>
   </div>
